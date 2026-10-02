@@ -5,7 +5,7 @@
 
 | Check | Evidence | Pass condition | Weight |
 |---|---|---|---|
-| Diagnosis matches evidence | Plan's stated cause + repro report's conclusion | Plan correctly names the same root cause shown in the repro evidence (8-space indent causing code block parsing) | required |
+| Diagnosis matches evidence | Plan's stated cause compared to reproduced evidence | Plan correctly names the same root cause shown in the repro evidence on the issue thread | required |
 | Scope is bounded | Plan's scope/change section | Plan describes only the minimum changes needed to fix the root cause; no scope creep or extra refactoring | required |
 | Fix targets cause, not symptom | Plan's fix steps + repro evidence | Plan addresses the root cause, not just a workaround or surface-level fix | required |
 | Steps are executable | Plan's implementation steps | Steps are numbered, specific, and a stranger could execute them without re-reading the issue | required |
