@@ -33,3 +33,7 @@ python -m pytest tests/unit/test_readme_parser.py::TestReadmeParser::test_extrac
 ```
 
 Expected result: Test passes (no XFAIL, no failures). Output should show:
+` test_extract_heading_hierarchy PASSED [100%] `
+
+## Unknowns & Notes
+- None. The fixture removal is straightforward based on the reproduced evidence.
