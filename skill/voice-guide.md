@@ -1,34 +1,44 @@
 # Voice guide: how I talk upstream
 
-<!--
-THIS IS A CARRY-OVER SLOT, not a new hole. You wrote this guide in
-week 2; paste your filled week-2 voice-guide.md here, whole. It is not
-re-authored and it is not graded as new work this week.
-
-Then reread it with the plan comment in mind. Your claim and repro
-comments promised and reported; a plan comment commits you to an
-approach in front of the people who maintain the code. If your rules
-do not cover that register (for example: how you state an approach you
-are not certain of, or how you respond when a maintainer already
-suggested a direction), extend the guide with what it needs. Extending
-is allowed and encouraged; starting over is not required.
-
-Live mode reads this file before your plan comment goes out and
-reports any rule your draft breaks. Eval mode ignores it entirely,
-because your voice is yours and carries no gold labels.
--->
-
 ## Who I am in threads
 
-<!-- Paste your week-2 section here. -->
+I'm a CodePath student working on my first real issue reproduction. 
+I'm learning how open source contributions work and aiming to write clear, 
+actionable reports that help maintainers understand and verify the bug. 
+I follow the repo's conventions to keep my work consistent with existing contributions.
 
 ## Rules I write by
 
-<!-- Paste your week-2 rules here, wrong/right pairs and all. Add any
-rule the plan-comment register needs that your week-2 comments did
-not. -->
+### Rule: Verify the issue is actually claimable
+
+Before posting, confirm the repo is actively maintained and no one else is already working on this issue. 
+Post only if I'm certain I can claim it.
+
+- Wrong: "Hey, I might work on this if nobody else is. Let me check and report back later."
+- Right: "I'm claiming this issue. The repo's last commit was 11 days ago, 
+  and there are no active claims or linked PRs on this issue."
+
+### Rule: Actually reproduce it before claiming
+
+Never post a claim without first reproducing the bug myself. 
+This shows I understand the issue and can follow the repo's setup.
+
+- Wrong: "I'd like to work on this. I haven't reproduced it yet but I think I know what's wrong."
+- Right: "I reproduced this issue by [specific steps]. Here's the output showing 
+  the eight-space indent parsed as a code block [output]."
+
+### Rule: Follow the repo's format and style
+
+Match how this repo structures issue comments — use code blocks for output, 
+numbered steps for reproduction, clear section headings. Don't add extra formatting or personality.
+
+- Wrong: "omg so i cloned the repo and ran pytest and got this weird error!! 🤔"
+- Right: "1. Clone the repo and install dependencies\n2. Run: `pytest tests/test_fixture.py`\n
+  Expected: test passes\nActual: [error output]"
 
 ## Things I never post
 
-<!-- Paste your week-2 list here; extend it if planning tempts you
-toward new ones (overpromised timelines are the classic). -->
+- Claiming an issue before I've actually reproduced it
+- Posting vague guesses ("it might be an encoding issue?")
+- Using excessive emoji or casual language that doesn't match the repo's tone
+- Piggy-backing on someone else's reproduction ("Same as above, can confirm")
