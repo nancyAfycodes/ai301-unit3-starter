@@ -1,5 +1,7 @@
 # Implementation Plan for Issue #71
 
+Branch: fix/71-heading-fixture-indent
+
 ## Root Cause
 The test fixture in `tests/unit/test_readme_parser.py::test_extract_heading_hierarchy` 
 has 8-space indentation at the beginning of each line. This indentation causes Markdown 
@@ -19,21 +21,20 @@ No changes to the parser code, no refactoring, no additional tests.
 ## Implementation Steps
 1. Open `tests/unit/test_readme_parser.py`
 2. Locate `test_extract_heading_hierarchy` method (around line 138)
-3. Remove the 8-space indentation from the markdown fixture string (lines 141-153)
-   - Change each indented line to start at column 0 (no leading spaces)
-4. Remove the `@pytest.mark.xfail(strict=True, reason="issue #71...")` decorator
+3. Remove the 8-space indentation from the markdown fixture string (lines 141-152)
+4. Remove the decorator block at lines 134-137 (`@pytest.mark.xfail(strict=True, reason="issue #71...")`)
 5. Save the file
 
 ## Testing & Verification
 Run the test to verify the fix:
 ```bash
-cd E:\CodePath\AI 301\pathreview-ai301-fa26-s3
+cd pathreview-ai301-fa26-s3
 source venv/Scripts/activate
-python -m pytest tests/unit/test_readme_parser.py::TestReadmeParser::test_extract_heading_hierarchy -v
+python -m pytest tests/unit/test_readme_parser.py -v
 ```
 
 Expected result: Test passes (no XFAIL, no failures). Output should show:
 ` test_extract_heading_hierarchy PASSED [100%] `
 
 ## Unknowns & Notes
-- None. The fixture removal is straightforward based on the reproduced evidence.
+- Confirmed: once indentation is removed, both the heading extraction and the assertion checks pass.
