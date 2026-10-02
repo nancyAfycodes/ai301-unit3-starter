@@ -1,53 +1,48 @@
 # Procedure: how this skill grades a plan package
 
-<!--
-THIS IS THE PART YOU WRITE, and it is a new kind of part. Weeks 1 and
-2, SKILL.md carried a numbered workflow and you only wrote judgment
-files. This week the workflow is gone from the frame: SKILL.md says
-"execute procedure.md", and these are the operating steps you author.
-The machinery is in your hands now.
-
-Your operator swap is the design brief. When your executor stalled
-because your rubric said WHAT to decide but not HOW to find the
-evidence, that was a procedure gap. This file is where those gaps get
-closed: a complete procedure lets someone who has never seen a plan
-package before (a groupmate, or the skill itself) grade one exactly the
-way you would.
-
-Under each stage heading below, write the concrete steps for that
-stage. The one-line note under each heading says what a complete
-procedure must decide there. Write steps, not intentions: "read the
-repro evidence before the plan, and note what behavior it pins down"
-is a step; "understand the context" is a wish.
--->
-
 ## Read order
 
-<!-- What gets read, in what order, before any check is graded, and
-what to note down from each part while reading. A complete procedure
-decides the order (issue first? repro evidence first?) and says why
-the order matters for the checks that come later. -->
+1. Start with the reproduced evidence (unit 2: repro-report.md and claim comment)
+   - Note: What is the root cause named in the conclusion?
+   - Note: What behavior does the error output show?
+2. Then read the plan comment/document
+   - Note: What cause does the plan state?
+   - Note: What specific changes does it propose?
+
+Read order matters: you need to know what the repro proved before you can judge 
+whether the plan matches it.
 
 ## Evidence gathering
 
-<!-- For each evidence family your rubric's checks name, the concrete
-gathering move: which part of the package (or, live, which page or
-thread location per your evidence guide) to pull the fact from, and
-what to record. A complete procedure leaves no check whose evidence an
-executor would have to hunt for. -->
+For each check:
+
+- **Diagnosis matches evidence**: Gather the repro report's conclusion + the plan's stated cause
+- **Scope is bounded**: Gather the plan's "what I'll change" section
+- **Fix targets cause**: Gather the repro evidence's root cause + plan's fix approach
+- **Steps are executable**: Gather the plan's implementation steps (numbered list)
+- **Test plan is concrete**: Gather the plan's verification/testing section
+- **No hidden unknowns**: Scan the plan for vague language or hand-waving
 
 ## Check execution
 
-<!-- How one check runs against gathered evidence: in what order the
-checks execute, what an executor does when evidence for a check is
-genuinely absent, and when a check may be graded without re-reading
-the whole package. A complete procedure makes two executors grade the
-same package the same way. -->
+Execute in order:
+
+1. Diagnosis matches evidence — Compare plan's stated cause to repro report's conclusion. 
+   Are they naming the same root cause?
+2. Scope is bounded — Does the plan list only the minimum changes? Any refactoring or extras?
+3. Fix targets cause — Does the plan fix the root cause or work around the symptom?
+4. Steps are executable — Could a stranger follow these steps? Are they specific (file names, line numbers)?
+5. Test plan is concrete — Is the test command exact? Does it specify passing vs. failing output?
+6. No hidden unknowns — Does the plan acknowledge anything uncertain or difficult?
 
 ## Verdict assembly
 
-<!-- How the per-check grades become the final accept or reject:
-apply your rubric's verdict rule, state how unclear grades enter it,
-and say what gets quoted in the output for the deciding check. A
-complete procedure produces the same verdict from the same grades,
-every time. -->
+Apply the verdict rule:
+- All required checks pass → Accept
+- Any required check fails → Reject
+- Unclear grades → Treat as fail, Reject
+- Preferred checks never change the verdict
+
+When you reach the verdict:
+- If Accept: state "Plan is ready to execute"
+- If Reject: quote the check that failed and why
