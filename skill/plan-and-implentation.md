@@ -7,7 +7,6 @@ nancyAfycodes
 
 **Link:** https://github.com/codepath/pathreview-ai301-fa26-s3/issues/71#issuecomment-5952027615
 
-**Text:**
 # Implementation Plan for Issue #71
 
 Branch: fix/71-heading-fixture-indent
