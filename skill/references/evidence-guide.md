@@ -1,10 +1,10 @@
 # Evidence guide: where evidence lives in a plan package
 
 ## Diagnosis
-Where it lives: The plan's "Root Cause" section, compared against the issue's reproduced evidence (GitHub comments).
+Where it lives: The plan's "Root Cause" or "Problem" section, compared against the issue's reproduced evidence.
 
-What good looks like: The plan names the same root cause the repro evidence shows. 
-For issue #71, that's the 8-space indentation parsed as a code block.
+What good looks like: The plan identifies the same root cause shown in the repro evidence. 
+The cause should be stated at the level of mechanism (not symptom): "X causes Y" not "Y is broken."
 
 ## Scope
 Where it lives: The plan's "Scope" section.
