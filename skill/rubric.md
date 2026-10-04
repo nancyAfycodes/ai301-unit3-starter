@@ -8,7 +8,7 @@
 | Diagnosis matches evidence | Plan's stated cause compared to reproduced evidence | Plan correctly names the same root cause shown in the repro evidence on the issue thread | required |
 | Scope is bounded | Plan's scope section | Plan describes what will and won't change; generally limits changes to the stated issue | required |
 | Fix targets cause, not symptom | Plan's fix steps + repro evidence | Plan addresses the root cause, not just a workaround or surface-level fix | required |
-| Steps are executable | Plan's implementation section | Plan describes how to make the change; specific enough that someone could attempt it | required |
+| Steps are executable | Plan's implementation section | Plan describes how to make the change in understandable terms; someone could start attempting it | required |
 | Test plan is stated | Plan's testing/verification section | Plan describes how to verify the fix works (whether as a command, CI check, manual steps, or observation) | required |
 | Expected output stated | Plan's testing/verification section | Plan names the specific expected output or behavior after the fix (e.g., "test passes with PASSED [100%]"), not generic language like "it works" | required |
 | Professional tone | Plan comment text | Language is specific and clear, matches the repo's contribution style | required |
