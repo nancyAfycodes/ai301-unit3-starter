@@ -16,7 +16,7 @@ whether the plan matches it.
 
 For each check:
 - **Diagnosis matches evidence**: Gather the issue's reproduced evidence (from GitHub comments/thread) + the plan's stated cause
-- **Scope is bounded**: Gather the plan's "Scope" section
+- **Scope is bounded**: Find the section describing what will and won't change. Read it against what the repro evidence suggests needs fixing.
 - **Fix targets cause**: Gather the repro evidence's root cause + plan's fix approach
 - **Steps are executable**: Gather the plan's implementation steps (numbered list)
 - **Test plan is concrete**: Gather the plan's verification/testing section
