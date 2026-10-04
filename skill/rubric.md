@@ -10,7 +10,8 @@
 | Fix targets cause, not symptom | Plan's fix steps + repro evidence | Plan addresses the root cause, not just a workaround or surface-level fix | required |
 | Steps are executable | Plan's implementation steps | Steps describe concrete actions that someone could follow; not vague or missing key details | required |
 | Test plan is concrete | Plan's testing/verification section | Plan specifies the exact command to run and what success looks like (e.g., "test passes with output X"), not vague ("it works") | required |
-| Thread conventions | Plan comment text + repo style guide | Plan comment uses clear, professional language matching the repo's tone; no excessive emoji, vague language, or casual phrasing | required |
+| Professional tone | Plan comment text | Language is specific and clear, matches the repo's contribution style | required |
+| No excessive emoji | Plan comment text | Emoji use is minimal or absent | preferred |
 | No hidden unknowns | Plan text | Plan acknowledges uncertainties or what it doesn't know; doesn't hide or hand-wave difficult parts | preferred |
 
 ## Verdict rule
