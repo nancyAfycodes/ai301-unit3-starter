@@ -9,7 +9,7 @@
 | Scope is bounded | Plan's scope/change section | Plan describes only the minimum changes needed to fix the root cause; no scope creep or extra refactoring | required |
 | Fix targets cause, not symptom | Plan's fix steps + repro evidence | Plan addresses the root cause, not just a workaround or surface-level fix | required |
 | Steps are executable | Plan's implementation steps | Steps describe concrete actions that someone could follow; not vague or missing key details | required |
-| Test command specified | Plan's testing/verification section | Plan includes a command to run the test (with file path and test name); format may vary | required |
+| Test plan is stated | Plan's testing/verification section | Plan describes how to verify the fix works (whether as a command, CI check, manual steps, or observation) | required |
 | Expected output stated | Plan's testing/verification section | Plan names the specific expected output or behavior after the fix (e.g., "test passes with PASSED [100%]"), not generic language like "it works" | required |
 | Professional tone | Plan comment text | Language is specific and clear, matches the repo's contribution style | required |
 | No excessive emoji | Plan comment text | Emoji use is minimal or absent | preferred |
